@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sabaripkumardockerhelloworld 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sabaripkumardockerhelloworld
+  template:
+    metadata:
+      labels:
+        app: sabaripkumardockerhelloworld 
+    spec:
+      containers:
+        - name: sabaripkumardockerhelloworld 
+          image: sabaripacr.azurecr.io/sabaripkumardockerhelloworld
+          ports:
+          - containerPort: 80
